@@ -14,12 +14,17 @@
         <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title"><br>
         <input type="text" name="genre" class="form-control" id="exampleFormControlInput1" placeholder="Genre"><br>
         <input type="text" name="director" class="form-control" id="exampleFormControlInput1" placeholder="Director"><br>
-        <input type="date" name="year" class="form-control" id="exampleFormControlInput1" placeholder="Year"><br>
-        <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title"><br>
-        <input type="text" name="plot" class="form-control" id="exampleFormControlInput1" placeholder="Plot">
+        <input type="number" name="year" class="form-control" id="exampleFormControlInput1" placeholder="Year"><br>
+        <textarea type="text" name="plot" class="form-control" id="exampleFormControlInput1" rows="10" placeholder="Plot"></textarea>
         </div>
 
         @error('title')             
+
+            @include('partials.error')
+
+        @enderror
+
+        @error('year')             
 
             @include('partials.error')
 
