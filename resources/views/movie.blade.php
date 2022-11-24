@@ -6,9 +6,9 @@
 
 <h3>{{ $movie->title }}</h3>
 
-<p> Genre: {{ $movie->genre }}</p>
-<p> Year: {{ $movie->year }}</p>
-<p> Director: {{ $movie->director }}</p>
+<p>Genre: <a href="{{ route('genres', ['genreName' => $movie->genre]) }}">{{ $movie->genre }}</a></p>
+<p>Year: {{ $movie->year }}</p>
+<p>Director: {{ $movie->director }}</p>
 
 <p>{{ $movie->plot }}</p>
 
