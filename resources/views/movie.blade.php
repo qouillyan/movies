@@ -22,4 +22,24 @@
         </ul>
 </div>
 
+    <hr>
+
+<form method="POST" action="/movies/{{ $movie->id }}/comments">
+
+    @csrf
+
+    <div class="mb-3">
+            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comment"></textarea>
+    </div>
+
+            <button type="submit">Submit</button>
+
+        @error('content')             
+
+            @include('partials.error')
+
+        @enderror
+
+</form>
+
 @endsection('content')
