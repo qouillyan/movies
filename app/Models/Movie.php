@@ -10,4 +10,9 @@ class Movie extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'genre', 'director', 'year', 'plot'];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
